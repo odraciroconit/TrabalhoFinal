@@ -1,5 +1,6 @@
 import React from "react";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 
 import Logo from '../images/Logo.png';
 
@@ -7,17 +8,18 @@ import Logo from '../images/Logo.png';
 const Navbar = () => {
   return (
     <nav style={styles.navbar}>
-      <div> <img src={Logo} alt="Logo" /> </div>
+      <Link to="/">
+      <div> <img src={Logo} alt="Logo" /> </div> </Link>
       <div style={styles.rightSection}>
         <ul style={styles.navLinks}>
           <li style={styles.navItem}>
-            <a href="#loja" style={styles.link}>Loja</a>
+            <a href="/loja" style={styles.link}>Loja</a>
           </li>
           <li style={styles.navItem}>
-            <a href="#login" style={styles.link}>Login</a>
+            <a href="/login"  style={styles.link}>Login</a>
           </li>
           <li style={styles.navItem}>
-            <a href="#registo" style={styles.link}>Registo</a>
+            <a href="/registo" style={styles.link}>Registo</a>
           </li>
         </ul>
         <div style={styles.icons}>

@@ -1,23 +1,50 @@
-
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css'
-import Navbar from "./components/Navbar";
+
+
+import RootLayout from './pages/RootLayout';
+import HomePage from './pages/Homepage';
+import Login from './pages/Login';
+import Register from './pages/Register'
 
 
 
+
+import ErrorPage from './pages/ErrorPage';
+import { Loja } from './pages/Loja';
+
+
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
+    id: 'root',
+    loader: () => ({ login: localStorage.getItem('token') ? true : false }),
+    children: [
+      { path: '/', element: <HomePage /> },
+      { path: '/login', element: <Login /> },
+      { path: '/registo', element: <Register /> },
+      { path: '/loja', element: <Loja /> },
+
+
+      
+      
+      
+    ],
+  },
+]);
 
 
 function App() {
+
+  
   
 
-  return (
-    <div>
-      <Navbar />
-      <div style={{ marginTop: "200px", padding: "20px" }}>
-        <h1>Bem-vindo à Minha Loja!</h1>
-        <p>Explore nossos produtos incríveis.</p>
-      </div>
-    </div>
-  );
+  return <RouterProvider router = {router}/>
+  
+  
 }
 
 export default App
