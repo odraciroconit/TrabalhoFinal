@@ -1,3 +1,3 @@
 export function Loja() {
-    <h1>Loja</h1>
+    <h1>Loja123</h1>
 }
