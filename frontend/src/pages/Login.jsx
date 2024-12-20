@@ -75,7 +75,7 @@ export default function Login() {
                 />
             </div>
             <div>
-                <label htmlFor="password">Passwordd:</label>
+                <label htmlFor="password">Password:</label>
                 <input
                     type="password"
                     id="password"
