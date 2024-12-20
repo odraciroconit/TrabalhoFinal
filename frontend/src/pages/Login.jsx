@@ -63,7 +63,7 @@ export default function Login() {
             <br />
             <br />
             <div>
-                <label htmlFor="email">Email1:</label>
+                <label htmlFor="email">Email12:</label>
                 <input
                     type="email"
                     id="email"
